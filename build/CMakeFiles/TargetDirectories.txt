@@ -1,0 +1,2 @@
+/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/edit_cache.dir
+/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/rebuild_cache.dir
