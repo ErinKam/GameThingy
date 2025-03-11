@@ -38,18 +38,33 @@ class Character {
         }
         void changeMoney(int change){
             money += change;
+            if (money <= 0){
+                money = 0;
+            }
         }
         void changeHealth(int damage){
             health += damage;
+            if (health < 0){
+                health = 0;
+            }
         }
         void changeMana(int cost){
             mana += cost;
+            if (mana < 0){
+                mana = 0;
+            }
         }
         void changeHealthPotions(int stock){
             healthPotions += stock;
+            if (healthPotions < 0){
+                healthPotions = 0;
+            }
         }
         void changeManaPotions(int stock){
             manaPotions += stock;
+            if (manaPotions < 0){
+                manaPotions = 0;
+            }
         }
         void changeScore(int stock){
             score += stock;

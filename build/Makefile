@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named characters
+
+# Build rule for target.
+characters: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 characters
+.PHONY : characters
+
+# fast build rule for target.
+characters/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/build
+.PHONY : characters/fast
+
+#=============================================================================
 # Target rules for targets named MyGame
 
 # Build rule for target.
@@ -129,18 +142,29 @@ MyGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/build
 .PHONY : MyGame/fast
 
-#=============================================================================
-# Target rules for targets named characters
+lib/characters.o: lib/characters.cpp.o
+.PHONY : lib/characters.o
 
-# Build rule for target.
-characters: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 characters
-.PHONY : characters
+# target to build an object file
+lib/characters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/lib/characters.cpp.o
+.PHONY : lib/characters.cpp.o
 
-# fast build rule for target.
-characters/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/build
-.PHONY : characters/fast
+lib/characters.i: lib/characters.cpp.i
+.PHONY : lib/characters.i
+
+# target to preprocess a source file
+lib/characters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/lib/characters.cpp.i
+.PHONY : lib/characters.cpp.i
+
+lib/characters.s: lib/characters.cpp.s
+.PHONY : lib/characters.s
+
+# target to generate assembly for a file
+lib/characters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/lib/characters.cpp.s
+.PHONY : lib/characters.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -176,6 +200,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MyGame"
 	@echo "... characters"
+	@echo "... lib/characters.o"
+	@echo "... lib/characters.i"
+	@echo "... lib/characters.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

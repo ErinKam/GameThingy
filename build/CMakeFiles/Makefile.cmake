@@ -40,6 +40,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/MyGame.dir/DependInfo.cmake"
   "CMakeFiles/characters.dir/DependInfo.cmake"
+  "CMakeFiles/MyGame.dir/DependInfo.cmake"
   )

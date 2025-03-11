@@ -14,12 +14,13 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
       FORCE)
 endif()
 
-add_library(characters STATIC /lib/characters.cpp /lib/characters.h) # Create a static library
+add_library(characters STATIC ${CMAKE_SOURCE_DIR}/lib/characters.cpp ${CMAKE_SOURCE_DIR}/lib/characters.h) # Create a static library
 target_include_directories(characters PUBLIC ${CMAKE_SOURCE_DIR}/lib)
 # Executable Target
 add_executable(${PROJECT_NAME} "main.cpp") # Create an executable
 
 target_link_directories(${PROJECT_NAME} PUBLIC characters)
+target_link_libraries(${PROJECT_NAME} PUBLIC characters)
 
 # External Libraries (e.g., using find_package)
 # find_package(Boost REQUIRED COMPONENTS filesystem system)

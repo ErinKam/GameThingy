@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -O3 -DNDEBUG CMakeFiles/MyGame.dir/main.cpp.o -o MyGame 
+/usr/bin/c++  -Wall -Wextra -O3 -DNDEBUG CMakeFiles/MyGame.dir/main.cpp.o -o MyGame   -L/home/erin/Documents/Code/cpp/GameThingy/characters  -Wl,-rpath,/home/erin/Documents/Code/cpp/GameThingy/characters libcharacters.a 

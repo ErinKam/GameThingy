@@ -1,4 +1,4 @@
-/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/MyGame.dir
 /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/characters.dir
+/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/MyGame.dir
 /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/edit_cache.dir
 /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles/rebuild_cache.dir

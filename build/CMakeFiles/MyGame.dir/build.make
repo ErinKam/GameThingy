@@ -92,6 +92,7 @@ MyGame_EXTERNAL_OBJECTS =
 
 MyGame: CMakeFiles/MyGame.dir/main.cpp.o
 MyGame: CMakeFiles/MyGame.dir/build.make
+MyGame: libcharacters.a
 MyGame: CMakeFiles/MyGame.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MyGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyGame.dir/link.txt --verbose=$(VERBOSE)
