@@ -2,7 +2,7 @@
 #include "time.h"
 #include "characters.h"
 using namespace std;
-using namespace gameCharacter;
+using namespace ErinGameTesting;
 
 void chooseRoom(){
     int input = -1, roomnumbers;
@@ -17,7 +17,7 @@ void chooseRoom(){
             cout << "You made an invalid choice." << endl;
         }
     }
-}
+};
 
 void monsterRoom(Character* p){
     int option = 5;
@@ -50,21 +50,21 @@ void monsterRoom(Character* p){
             p->changeManaPotions(-1);
         }
     }
-    if (option = 2){
+    if (option == 2){
         p->changeHealth(damage);
         cout << "You have taken " << damage << " damage." << endl;
     }
     int income = rand() % 10 + 1;
     p->changeMoney(income);
     cout << "You gained " << income << " coins" <<endl;
-}
+};
 
 void chestRoom(Character* p){
     int income = rand() % 10;
-    if (income = 10){
+    if (income == 10){
         income = 25;
     }
-    bool input = false;
+
     char yn;
     cout << "You found a room with a chest!" << endl;
     cout << "Do you open it? [y|n]" << endl;
@@ -81,7 +81,7 @@ void chestRoom(Character* p){
     else {
         cout << "You dont open the chest... wierd..." << endl;
     }
-}
+};
 
 void merchent(Character* p){
     srand(time(NULL));
@@ -104,7 +104,7 @@ void merchent(Character* p){
         cin >> input;
         if (input <= 0 || input >= 4){
             cout << "invalid input." << endl;
-            input = 0
+            input = 0;
         }
         else if (input == 1 && coins >= healthPrice){
             cout << "You buy a health potion!" << endl;
@@ -124,7 +124,7 @@ void merchent(Character* p){
         }
     }
     cout << "The mouse scurries away." << endl;
-}
+};
 
 bool lossManager(Character* p){
     if (p->getHealth() == 0){
@@ -132,26 +132,26 @@ bool lossManager(Character* p){
         return true;
     }
     return false;
-}
+};
 
 int roomEvent(Character* p){
     int randomNum;
     srand(time(NULL));
     randomNum = rand() % 10;
     if (randomNum <= 5){
-        monsterRoom(&p);
+        monsterRoom(p);
     }
     else if (randomNum == 6){
         cout << "The room is empty..." << endl;
     }
     else if (randomNum == 7 || randomNum == 8){
-        chestRoom(&p);
+        chestRoom(p);
     }
     else {
-        merchent(&p);
+        merchent(p);
     }
     bool chose;
-    chose = lossManager(&p);
+    chose = lossManager(p);
     p->changeScore(1);
     if (chose){
         return -1;
@@ -160,34 +160,32 @@ int roomEvent(Character* p){
     char c;
     cout << "Do you want to continue and risk loosing? [y|n]" << endl;
     cin >> c;
-    if (c = 'y'){
+    if (c == 'y'){
         return 1;
     }
     else {
         return 2;
     }
-}
-
-int ()
-
+};
 
 void update(Character* p){
     int con;
     chooseRoom();
-    con = roomEvent(&p);
+    con = roomEvent(p);
     if (con == 1){
-        update(&p);
+        update(p);
     }
     else{
         cout << "Thank You for playing!!!" << endl;
     }
-}
+};
 
 int main() {
     string pname;
     cout << "You are about to wake up." << '\n' << "What is your name?" << endl;
     cin >> pname;
-    Character Player(pname)
-    update(&Player);
+    Character Player(pname);
+    Character* p = &Player;
+    update(p);
     return 0;
 }

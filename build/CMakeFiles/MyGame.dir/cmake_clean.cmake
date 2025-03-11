@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyGame.dir/characters.cpp.o"
+  "CMakeFiles/MyGame.dir/characters.cpp.o.d"
   "CMakeFiles/MyGame.dir/main.cpp.o"
   "CMakeFiles/MyGame.dir/main.cpp.o.d"
   "MyGame"

@@ -1,7 +1,8 @@
-CMakeFiles/MyGame.dir/main.cpp.o: \
- /home/erin/Documents/Code/cpp/GameThingy/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/MyGame.dir/lib/characters.cpp.o: \
+ /home/erin/Documents/Code/cpp/GameThingy/lib/characters.cpp \
+ /usr/include/stdc-predef.h \
+ /home/erin/Documents/Code/cpp/GameThingy/lib/characters.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -157,5 +158,4 @@ CMakeFiles/MyGame.dir/main.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
- /home/erin/Documents/Code/cpp/GameThingy/characters.h
+ /usr/include/c++/13/bits/istream.tcc

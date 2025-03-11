@@ -1,5 +1,5 @@
 #include "characters.h"
-using namespace gameCharacter;
+using namespace ErinGameTesting;
 
 class Character {
     private:

@@ -63,7 +63,6 @@ CMAKE_BINARY_DIR = /home/erin/Documents/Code/cpp/GameThingy/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/characters.dir/all
 all: CMakeFiles/MyGame.dir/all
 .PHONY : all
 
@@ -72,49 +71,22 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/characters.dir/clean
 clean: CMakeFiles/MyGame.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/characters.dir
-
-# All Build rule for target.
-CMakeFiles/characters.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles --progress-num=3,4 "Built target characters"
-.PHONY : CMakeFiles/characters.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/characters.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/characters.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles 0
-.PHONY : CMakeFiles/characters.dir/rule
-
-# Convenience name for target.
-characters: CMakeFiles/characters.dir/rule
-.PHONY : characters
-
-# clean rule for target.
-CMakeFiles/characters.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/characters.dir/build.make CMakeFiles/characters.dir/clean
-.PHONY : CMakeFiles/characters.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MyGame.dir
 
 # All Build rule for target.
-CMakeFiles/MyGame.dir/all: CMakeFiles/characters.dir/all
+CMakeFiles/MyGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles --progress-num=1,2 "Built target MyGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles --progress-num=1,2,3 "Built target MyGame"
 .PHONY : CMakeFiles/MyGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MyGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/erin/Documents/Code/cpp/GameThingy/build/CMakeFiles 0
 .PHONY : CMakeFiles/MyGame.dir/rule

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/erin/Documents/Code/cpp/GameThingy/lib
+CXX_INCLUDES = 
 
-CXX_FLAGS =  -Wall -Wextra -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
 

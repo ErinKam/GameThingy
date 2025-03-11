@@ -2,10 +2,8 @@
 #define CHARACTERS_H
 
 #include <iostream>
-
-namespace gameCharacter {
-
-    class Character {
+namespace ErinGameTesting{
+class Character {
         private:
             int money, health, mana, healthPotions, manaPotions, score;
             std::string name;
@@ -24,7 +22,6 @@ namespace gameCharacter {
             void changeHealthPotions(int stock);
             void changeManaPotions(int stock);
             void changeScore(int stock);
-    };
+};
 }
-
 #endif

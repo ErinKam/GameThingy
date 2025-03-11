@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/erin/Documents/Code/cpp/GameThingy/characters.cpp" "CMakeFiles/MyGame.dir/characters.cpp.o" "gcc" "CMakeFiles/MyGame.dir/characters.cpp.o.d"
   "/home/erin/Documents/Code/cpp/GameThingy/main.cpp" "CMakeFiles/MyGame.dir/main.cpp.o" "gcc" "CMakeFiles/MyGame.dir/main.cpp.o.d"
   )
 
