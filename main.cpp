@@ -10,38 +10,45 @@ void chooseRoom(){
     srand(time(NULL));
     roomnumbers = rand() % 4 + 1;
     cout << roomnumbers << " doors." << endl;
-    while (input >= 0 && input <= roomnumbers){
+    while (input <= 0 || input > roomnumbers){
         cout << "Choose which room to enter (ex: 1):" << endl;
         cin >> input;
-        if (input <= 0 || input >= roomnumbers){
+        if (input <= 0 || input > roomnumbers){
             cout << "You made an invalid choice." << endl;
         }
     }
+    cout << "you enter room number " << input << endl << endl;
 };
 
 void monsterRoom(Character& p){
     int option = 5;
     srand(time(NULL));
     int damage = rand() % 10;
-    cout << "You find yourself in a room with monsters. With " << p.getHealth() << " health";
-    while (option <= 2){
+    cout << "You find yourself in a room with monsters. With " << p.getHealth() << " health" << endl;
+    while (option > 4){
         int hPotion = p.getHealthPotions();
         int mPotion = p.getManaPotions(); 
-        cout << "You have 4 options:" << endl;
-        cout << "1. Use mana to destroy the monsters (you wont take damage, but will lose 1 mana) You have " << p.getMana() << "left." << endl;
+        cout << "You have 4 options:" << endl << endl;
+        cout << "1. Use mana to destroy the monsters (you wont take damage, but will lose 1 mana) You have " << p.getMana() << " left." << endl;
         cout << "2. Fight the monsters and risk loosing health (the damage will be between 0-25)" << endl;
-        cout << "3. Drink a Health Potion (this heals 25 damage) and you get another choice of option. (You have" << hPotion << ")" << endl;
-        cout << "4. Drink a Mana Potion (this heals 2 mana) and you get another choice of option. (You have "<< mPotion << ")" << endl;
+        cout << "3. Drink a Health Potion (this heals 25 damage) and you get another choice of option. (You have " << hPotion << ")" << endl;
+        cout << "4. Drink a Mana Potion (this heals 2 mana) and you get another choice of option. (You have "<< mPotion << ")" << endl << endl;
         cin >> option;
         if (option >= 5 || option <=0){
             cout << "You made an invalid choice" << endl;
             option = 5;
+        }
+        else if (option == 3 && hPotion == 0){
+            cout << "You do not have any potions..." << endl << endl;
         }
         else if (option == 3){
             cout << "you drink a health potion!"<< endl;
             p.changeHealth(25);
             cout << "you now have " << p.getHealth() << " health" << endl; 
             p.changeHealthPotions(-1);
+        }
+        else if (option == 4 && mPotion == 0){
+            cout << "You do not have any potions..." << endl << endl;
         }
         else if (option == 4){
             cout << "you drink a health potion!"<< endl;
@@ -56,7 +63,7 @@ void monsterRoom(Character& p){
     }
     int income = rand() % 10 + 1;
     p.changeMoney(income);
-    cout << "You gained " << income << " coins" <<endl;
+    cout << "You gained " << income << " coins" << endl << endl;
 };
 
 void chestRoom(Character& p){
@@ -75,11 +82,11 @@ void chestRoom(Character& p){
     }
     else if (yn == 'y'){
         cout << "you find:" << endl;
-        cout << "..." << endl << income << " coins!";
+        cout << "..." << endl << income << " coins!" << endl;
         p.changeMoney(income);
     }
     else {
-        cout << "You dont open the chest... wierd..." << endl;
+        cout << "You dont open the chest... wierd..." << endl << endl;
     }
 };
 
@@ -94,7 +101,7 @@ void merchent(Character& p){
     cout << "Health Potion Price: " << healthPrice << " coins" << endl;
     cout << "Mana Potions Price: " << manaPrice << " coins" << endl;
     if (coins < manaPrice && coins < healthPrice){
-        cout << "too bad you are broke (" << coins << " coins)..." << endl;
+        cout << "too bad you are broke (" << coins << " coins)..." << endl << endl;
         return;
     }
     while (input != 3){
@@ -123,7 +130,7 @@ void merchent(Character& p){
             cout << "you are too poor for this (the mouse looks sad)." << endl;
         }
     }
-    cout << "The mouse scurries away." << endl;
+    cout << "The mouse scurries away." << endl << endl;
 };
 
 bool lossManager(Character& p){
@@ -156,9 +163,9 @@ int roomEvent(Character& p){
     if (chose){
         return -1;
     }
-    cout << "You have now gone through " << p.getScore() << " rooms!" << endl;
+    cout << "You have now gone through " << p.getScore() << " rooms!" << endl << endl;
     char c;
-    cout << "Do you want to continue and risk loosing? [y|n]" << endl;
+    cout << "Do you want to continue and risk loosing? [y|n]" << endl << endl;
     cin >> c;
     if (c == 'y'){
         return 1;
