@@ -1,72 +1,66 @@
 #include "characters.h"
-using namespace ErinGameTesting;
+#include <iostream>
+#include <string>
+namespace ErinGameTesting {
 
-class Character {
+
+//Character::character(string nameC) : name(nameC){}
+/*class Character {
     private:
         int money, health, mana, healthPotions, manaPotions, score;
-        std::string name;
-    public:
-        Character(std::string nameC){
-            name = nameC;
-            money = 0;
-            health = 100;
-            mana = 5;
-            healthPotions = 0;
-            manaPotions = 0;
-            score = 0;
-        }
-        int getHealth(){
+        string name;*/
+        int Character::getHealth(){
             return health;
         }
-        int getMoney(){
+        int Character::getMoney(){
             return money;
         }
-        int getMana(){
+        int Character::getMana(){
             return mana;
         }
-        int getHealthPotions(){
+        int Character::getHealthPotions(){
             return healthPotions;
         }
-        int getManaPotions(){
+        int Character::getManaPotions(){
             return manaPotions;
         }
-        int getScore(){
+        int Character::getScore(){
             return score;
         }
-        std::string getName(){
+        std::string Character::getName(){
             return name;
         }
-        void changeMoney(int change){
+        void Character::changeMoney(int change){
             money += change;
             if (money <= 0){
                 money = 0;
             }
         }
-        void changeHealth(int damage){
+        void Character::changeHealth(int damage){
             health += damage;
             if (health < 0){
                 health = 0;
             }
         }
-        void changeMana(int cost){
+        void Character::changeMana(int cost){
             mana += cost;
             if (mana < 0){
                 mana = 0;
             }
         }
-        void changeHealthPotions(int stock){
+        void Character::changeHealthPotions(int stock){
             healthPotions += stock;
             if (healthPotions < 0){
                 healthPotions = 0;
             }
         }
-        void changeManaPotions(int stock){
+        void Character::changeManaPotions(int stock){
             manaPotions += stock;
             if (manaPotions < 0){
                 manaPotions = 0;
             }
         }
-        void changeScore(int stock){
+        void Character::changeScore(int stock){
             score += stock;
         }
-};
+}

@@ -117,48 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyGame
+# Target rules for targets named Game
 
 # Build rule for target.
-MyGame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyGame
-.PHONY : MyGame
+Game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Game
+.PHONY : Game
 
 # fast build rule for target.
-MyGame/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/build
-.PHONY : MyGame/fast
+Game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
+.PHONY : Game/fast
 
-characters.o: characters.cpp.o
-.PHONY : characters.o
+lib/characters.o: lib/characters.cpp.o
+.PHONY : lib/characters.o
 
 # target to build an object file
-characters.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/characters.cpp.o
-.PHONY : characters.cpp.o
+lib/characters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/lib/characters.cpp.o
+.PHONY : lib/characters.cpp.o
 
-characters.i: characters.cpp.i
-.PHONY : characters.i
+lib/characters.i: lib/characters.cpp.i
+.PHONY : lib/characters.i
 
 # target to preprocess a source file
-characters.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/characters.cpp.i
-.PHONY : characters.cpp.i
+lib/characters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/lib/characters.cpp.i
+.PHONY : lib/characters.cpp.i
 
-characters.s: characters.cpp.s
-.PHONY : characters.s
+lib/characters.s: lib/characters.cpp.s
+.PHONY : lib/characters.s
 
 # target to generate assembly for a file
-characters.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/characters.cpp.s
-.PHONY : characters.cpp.s
+lib/characters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/lib/characters.cpp.s
+.PHONY : lib/characters.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +166,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,10 +185,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MyGame"
-	@echo "... characters.o"
-	@echo "... characters.i"
-	@echo "... characters.s"
+	@echo "... Game"
+	@echo "... lib/characters.o"
+	@echo "... lib/characters.i"
+	@echo "... lib/characters.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
